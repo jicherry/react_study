@@ -13,40 +13,41 @@
             madeIn : 'korea'
         };
 
-        // const chocochipCookie = {
-        //     base : 'cookie',
-        //     madeIn : 'korea',
-        //     toping : 'chocochip'
-        // };
-
-        // const strawberryCookie = {
-        //     base : 'cookie',
-        //     madeIn : 'korea',
-        //     toping : 'strawberry'
-        // };
-
-        
-        /// spread 연산자 -> (... 변수명입력,) 으로 작성
-
-
         const chocochipCookie = {
-            ...cookie,
+            base : 'cookie',
+            madeIn : 'korea',
             toping : 'chocochip'
         };
 
         const strawberryCookie = {
-            ...cookie,
+            base : 'cookie',
+            madeIn : 'korea',
             toping : 'strawberry'
         };
 
-        console.log(chocochipCookie);
+        
+    //   spread 연산자 -> (... 변수명입력,) 으로 작성
+    
+    // ex)
+    //     const chocochipCookie = {
+    //         ...cookie,
+    //         toping : 'chocochip'
+    //     };
+
+    //     const strawberryCookie = {
+    //         ...cookie,
+    //         toping : 'strawberry'
+    //     };
+
+    //     console.log(chocochipCookie);
+
 
 
         const noToping = ['촉촉한 쿠기' , '안 촉촉한 쿠기'];
         const toping = ['바나나 쿠기' , '딸기 쿠기'];
 
-        const allCookie = [...noToping, '함정쿠기', ...toping]; // 합치기 가능 
-        // const allCookie = [...noToping, ...toping]; // (중간에 다른 값도 넣기 가능)
+        const allCookie = [...noToping, ...toping]; // 합치기 가능 
+        // const allCookie = [...noToping, '함정쿠키', ...toping]; // (중간에 다른 값 넣기 가능)
 
         console.log(allCookie);
 
