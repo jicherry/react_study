@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //동기 방식
+
+        function taskA() {
+            console.log('A 작업 끝');
+        }
+
+        taskA();
+        console.log('코드 끝');
+
+
+        //비동기 방식
+        
+        function taskB(){
+            setTimeout(() => {
+                console.log('A TASK END');
+            }, 2000);
+        }
+
+        taskB();
+        console.log('코드 끝');
+
+
+        //콜백함수 이용해서
+
+        function taskC(a, b, cb) {
+            setTimeout(() => {
+                const res = a + b;
+                cb(res);
+            }, 3000); //3초 후
+        }
+
+        taskC(3, 4, (res) => {
+            console.log('A TASK RES : ', res);
+        });
+
+        console.log('코드 끝');
+
+
+        function taskD(a , cb) {
+            setTimeout(() => {
+                const res = a * 2
+                cb(res);
+            }, 5000);
+        } 
+
+        taskD(5, (res) => {
+            console.log('A TASK RES : ', res);
+        });
+
+
+    </script>
+</body>
+</html>
